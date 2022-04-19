@@ -43,9 +43,11 @@ router.post("/gather", (request, response) => {
       switch (request.body.Digits) {
         case "1":
           twiml.say("Redirecting to personal number");
+          //redirecting user call to personal number
           return response.redirect("/forward_call");
         case "2":
           twiml.say("You selected voice message!");
+          //redirecting user call to voice message
           return response.redirect("/voice_message");
         default:
           twiml.say("Sorry, I don't understand that choice.");
@@ -68,7 +70,7 @@ router.get("/forward_call", async (req, res) => {
     const dial = twiml.dial({
       action: "/hangup?callStatus=agentCall",
     });
-    dial.number("+923150529331");
+    dial.number("+923455293564");
     res.type("text/xml");
     res.send(twiml.toString());
   } catch (error) {
