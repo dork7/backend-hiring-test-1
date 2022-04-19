@@ -1,4 +1,8 @@
 {
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon ./src/index.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
@@ -8,8 +12,5 @@
     "loadash": "^1.0.0",
     "mongoose": "^6.3.0",
     "twilio": "^3.76.1"
-  },
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon ./src/index.js"
   }
 }
