@@ -1,6 +1,4 @@
 const express = require("express");
-const accountSid = "AC7b2e3b1e6cb727fe8f47bf72ff668765";
-const authToken = "bfb97141ad5cf21c54afb974b00c8746";
 const VoiceResponse = require("twilio").twiml.VoiceResponse;
 const router = express.Router();
 const CallSchema = require("../models/call");
